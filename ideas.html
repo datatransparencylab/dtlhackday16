@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<section class="faq">
+  <div class="container question col-xs-12 col-sm-8 col-sm-offset-2">
+    <h1 class="text-center">Hack Ideas</h1>
+    <hr>
+    <div class="row">
+      <div class="col-xs-24 col-sm-16">
+        {% for item in site.event.ideas %}
+        <div class="question col-xs-24 col-sm-16">
+          <h2 id="{{ item.id }}">{{ item.title }}</h2>
+          <hr>
+          {{ item.hook | markdownify }}
+          {{ item.description | markdownify }}
+          <hr>
+          Type: {{ item.type }}
+          <hr>
+          Assets
+          <ul>
+          {% for asset in item.assets %}
+          <li><a href="{{asset.url}}">{{asset.title}}</a></li>
+          {% endfor %}
+          </ul>
+          <hr>
+          Links
+          <ul>
+          {% for link in item.links %}
+          <li><a href="{{link.url}}">{{link.title}}</a></li>
+          {% endfor %}
+          </ul>
+          <hr>
+          <!--Facilitators
+          <ul>
+          {% for facilitator in item.facilitators %}
+          <li>{{facilitator.name}}</li>
+          {% endfor %}
+          </ul>-->
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>

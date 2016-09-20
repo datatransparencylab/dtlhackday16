@@ -1,0 +1,328 @@
+# --------------
+# -- Settings --
+# --------------
+
+# Ignore this. This is only if you're hosting this in a sub-folder.
+baseurl: "/dtlhackday16"
+
+# If you're using GitHub pages without custom domain, this is "[github_username].github.io". Prepend with "http://"
+url: "https://datatransparencylab.github.io/dtlhackday16"
+
+# The ability to use custom themes.
+style:
+  theme: "original"
+
+# Let people connect & engage with you through social media.
+social:
+  twitter_handle: "dtl_info"
+
+# This is Search Engine Optimization. It'll help your website look better on search.
+seo:
+  title:       "DTL Hack Day| 19th November 2016"
+  description: "A 12 hours hack day to work together on building tools that help educating users on the importance of privacy and transparency"
+  #image:       "https://prime.mlh.io/img/logos/mlh-prime-color.svg"
+
+# Event information.
+event:
+  name:        "DTL Hack Day"
+  description: "A 12 hours hack day to work together on building tools that help educating users on the importance of privacy and transparency"
+  date:        "Saturday 19th November 2016"
+  location:    "Columbia University, NY, United States"
+
+  hero:
+    links:
+      - text: "Register"
+      #href: "https://www.eventbrite.com"
+        href: "#attending"
+      - text: "Sponsor"
+        href: "mailto:events@datatransparencylab.org"
+
+  about:
+    description: >
+      The Data Transparency Lab is hosting, collocated with DTL 2016
+      conference a 12-hours hack day.
+      The hack day main topic is “User Education on Privacy and
+      Transparency”. If you have any idea to help users understand
+      why they should care about privacy and why they should demand
+      online services to be more transparent you shouldn't miss this
+      event!
+
+  # Info Sections
+  info:
+    section-intro: >
+      Don't have any idea about a hack that could fit into the Hack Day main theme? No worries! We have a list of potential challenges and ideas that you can hack on! Check the list below:
+    section-footer: >
+      You can check <a href="ideas.html"> a detailed list of these ideas </a> 
+      but you are free to bring your own idea. Furthermore, do you
+      have an idea for a project that you want the hackers to work in? Please
+      send us an <a href="mailto:{{events@datatransparencylab.org}}">e-mail</a> so we can include it in the list of challenges for
+      hackers!
+    sections:
+      - image: "images/image1.png"
+        title: "APPS"
+        description: >
+          We are looking for apps (mobile app, browser plugin, web site, etc.)
+          that let users understand the privacy implications of actions they
+          do.
+      - image: "images/image2.png"
+        title: "VISUALIZATIONS"
+        description: >
+          We have access to multiple sources of data that could be useful to
+          users, we are looking for ways to create impactful visualizations
+          that raise awareness on privacy/transparency.
+      - image: "images/image3.png"
+        title: "EDUCATION"
+        description: >
+          We are also looking for material (websites, videos, comics, etc.)
+          that can be used in an innovative way to communicate adequately the
+          need for privacy and transparency.
+
+  prizes:
+    - title: 1st Prize 
+      amount: $2000 
+    - title: 2nd Prize 
+      amount: $1000 
+    - title: 3rd Prize 
+      amount: $500 
+
+  sponsor-prizes:
+    - title: E-Corp Prize 
+      amount: $2000 
+
+  criteria:
+    - title: Originality
+      weight: 25%
+    - title: Look & Feel
+      weight: 25%
+    - title: Technical Complexity
+      weight: 25%
+    - title: Does it work?
+      weight: 25%
+
+  judges:
+    - name: Daniel Coloma
+      image: images/daniel.jpg
+    - name: Ramón Sangüesa
+      image: images/ramon.jpg
+
+  sponsors:
+    - name: E-Corp 
+      image: images/ECorp.png
+      description: E-Corp 
+      url: http://www.ecorp.com 
+
+  schedule:
+    - start: 08:00 AM 
+      title: Doors Open
+    - start: 09:00 AM
+      title: Intro // Kick-off
+    - start: 09:30 AM
+      title: Idea Pitches and Team Formation
+    - start: 10:30 AM
+      title: Hack!
+    - start: 12:30 PM
+      title: Lunch!
+    - start: 01:30 PM
+      title: Hack!
+    - start: 06:45 PM
+      title: Show and Tell!
+    - start: 07:45 PM
+      title: Judges Evaluation!
+    - start: 08:15 PM
+      title: Prizes and Closing!
+
+  # Hack Ideas
+  ideas:
+     - title: "Visualization of Personal Information Leaks"
+       id: "recon-visualization"
+       hook: > 
+         Northeastern University has been running <a
+         href="http://recon.meddle.mobi/"> ReCon project </a>with the 
+         target of identifying which mobile apps are leaking Personal Information,
+         which type of information it's leaked and what are the destinations of 
+         that info. We want you to create a visualization that let people 
+         understand what is going on with their data when they use mobile 
+         applications on their mobile devices.
+       description: >
+         The idea would be using a <a
+         href="http://recon.meddle.mobi/json/data.json"> JSON file</a> that
+         gathers aggregated information about all the leaks of Personal
+         Information that have been detected by the ReCon project.
+         Alternatively, an <a
+         href="http://datatransparencylab.github.io/recon-api/">API has been
+         also built on top of that json that could be used depending on your
+         preference.  You can get some inspiration by checking a <a
+         href="http://datatransparencylab.github.io/recon/">sample
+         visualization</a> developed by the Data Transparency Lab.
+       type: "Visualization"
+       assets: 
+         - title: "ReCon Dataset" 
+           url: "http://recon.meddle.mobi/json/data.json"
+         - title: "Example Visualization"
+           url: "http://datatransparencylab.github.io/recon/"
+         - title: "API"
+           url: "http://datatransparencylab.github.io/recon-api/"
+       links: 
+         - title: "ReCon Project Homepage"
+           url: "http://recon.meddle.mobi/"
+       facilitators: 
+         - name: "Dave Choffnes"
+         - name: "Daniel Coloma"
+     - title: "Visualization of Fingerprinting Adoption"
+       id: "privacycensus-visualization"
+       hook: >
+         Thanks to a Princeton project named <a
+         href="https://webtransparency.cs.princeton.edu/webcensus/">Privacy
+         Census</a>, we can now understand how extended are
+         advanced tracking techniques such as fingerprinting. However, this 
+         information might be difficult to process and understand for the 
+         average user. We are looking for ways to communicate this appropriately
+         to end-users so they can understand what is fingerprinting, how is 
+         it used and how does it affect them.
+       description: > 
+         The idea would be using either the whole dataset shared by Princeton
+         or a simplified dataset that just contains the key insights about some
+         of the key tracking techniques that are being analysed. The visualization
+         could be, for instance, a website that shows which are the top domains
+         using fingerpriting, or how fingerprinting adoption varies depending on
+         the geography or on the website type.
+       type: "Visualization"
+       assets: 
+         - title: "Complete Datasets" 
+           url: "https://webtransparency.cs.princeton.edu/webcensus/#data"
+         - title: "Insight Dataset"
+           url: "TBD"
+       links: 
+         - title: "Privacy Census Homepage" 
+           url: "https://webtransparency.cs.princeton.edu/webcensus/"
+       facilitators: 
+         - name: "Steven Englehardt" 
+         - name: "Daniel Coloma"
+     - title: "How much are you worth for Facebook?"
+       id: "fdvt-material"
+       hook: >
+         <a href="http://fdvt.org/">Facebook Data Valuation Tool</a> is a
+         Browser plugin that has been developed by Carlos III University. The
+         plugin shows end-user an estimation of the value they are generating
+         to Facebook based on her browsing activity (i.e. the ads she watches
+         and clicks on).  The idea of this hack is creation companion education
+         material that based on the tool, let users understand clearly the
+         value they have for facebook, and on which facets do their value
+         depend.  Education Material could be some statistics/data, a vídeo, a
+         website, etc.
+       description: >
+         This material could be some animation, video, etc. that let user 
+         understand how their Facebook activity is monetized or a visualization
+         about how the value a Facebook user varies depending on the audience
+         in which she is categorised and how is she assigned to those audiences.
+       type: "Education Material"
+       assets:
+         - title: "Tool and Datasets"
+           url: TBD
+       links:
+         - title: "FDVT Homepage" 
+           url: "http://fdvt.org/fdvt/"
+       facilitators: 
+         - name: "Daniel Coloma"
+         - name: "Ángel Cuevas"
+     - title: "How much information does this application leak?"
+       id: "recon-plugin"
+       hook: >
+         Northeastern University has been running <a
+         href="http://recon.meddle.mobi/"> ReCon project </a>with the 
+         target of identifying which mobile apps are leaking Personal Information,
+         which type of information it's leaked and what are the destinations of 
+         that info. We want you to create a browser plugin that let end-users
+         chec what is the level of leakiness of an application when she is 
+         browsing the application homepage in the Google Play or App Stores.
+       description: >
+         ReCon API is an API developed on top of the Dataset gathered by the
+         ReCon project. It lets developers check if an app is leaking PI or
+         whether a domain is receiving information from multiple apps. The idea
+         would be using this API to develop a browser plugin that informs user
+         about how leaking an application is when the browser is on a URL that 
+         corresponds to a Google Play or App Store application.
+       type: "Plugin"
+       assets: 
+         - title: "API"
+           url: "http://datatransparencylab.github.io/recon-api/"
+       links: 
+         - title: "ReCon Project" 
+           url: "http://recon.meddle.mobi/"
+       facilitators: 
+         - name: "Daniel Coloma"
+         - name: "Dave Choffnes"
+     - title: "How much information does my smartphone leak?"
+       id: "recon-app"
+       hook: >
+         Northeastern University has been running <a
+         href="http://recon.meddle.mobi/"> ReCon project </a>with the 
+         target of identifying which mobile apps are leaking Personal Information,
+         which type of information it's leaked and what are the destinations of 
+         that info. We want you to create an Android application that scans the
+         applications a user has installed in her device and tells her the 
+         potential information that those applications could be leaking and 
+         calculates a <i>leaking </i> score for her device.
+       description: >
+         ReCon API is an API developed on top of the Dataset gathered by the
+         ReCon project. It lets developers check if an app is leaking PI or
+         whether a domain is receiving information from multiple apps. 
+         The idea would be using this API to develop an Android application
+         that let users scan their Android apps and tell them if any of the
+         apps has been spotted before sharing PI. The application could offer
+         user advise about how to proceed depending on how bad the issues
+         spotted in the installed applications are.
+       type: "Application"
+       assets:
+         - title: "API"
+           link: "http://datatransparencylab.github.io/recon-api/"
+       links:
+         - title: "ReCon Project Homepage"
+           link: "http://recon.meddle.mobi/"
+       facilitators:
+         - name: "Daniel Coloma"
+         - name: "Dave Choffnes"
+
+  # Frequently asked questions.
+  faq:
+    - question: "What is a hackathon?"
+      answer: >
+        A hackathon is an invention marathon. People come together to build cool
+        stuff over 12 hours. It's very beginner friendly
+    - question: "How much does it cost?"
+      answer: >
+        Nothing. Attending is free.
+    - question: "Do I need to be a developer to attend?"
+      answer: >
+        No! We are looking not only for tools, but also visualizations and other material that could be used to educate people on privacy and transparency.
+    - question: "Where is the event?"
+      answer: >
+        The event is being hosted at [Columbia University](#venue) .
+    - question: "Is there a code of conduct?"
+      answer: >
+        Yes there is. We enforce it very strongly. You can [find it here](code-of-conduct.html).
+
+  # This is the message you'll receive once you've registered.
+  register:
+    message: >
+      You'll receive more information closer to the hackathon.
+
+  # Contact Information 
+  contact:
+    twitter_handle: dtl_info
+    twitter_hashtag: dtlhackathon16
+    email: events@datatransparencylab.org
+
+# ----------------------------------------------------
+# -- Ignore this unless you know what you're doing. --
+# ----------------------------------------------------
+
+markdown: kramdown
+exclude:
+ - node_modules
+ - gulpfile.js
+ - Gemfile
+ - Gemfile.lock
+ - package.json
+ - README.md
+ - CNAME

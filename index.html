@@ -1,0 +1,192 @@
+---
+layout: default
+---
+
+{% include hero.html %}
+
+<section class="about">
+  <div class="container">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
+      {{ site.event.about.description | markdownify }}
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="container">
+    <div class="row">
+      <h3 style="text-align: center">
+        The output of a hack should be a tool, but a tool in this context goes beyond apps or plugins as there are many other alternative ways to help end-users:
+      </h3>
+    </div>
+    <div class="items row">
+      {% for section in site.event.info.sections %}
+        <div class="col-xs-12 col-sm-4 text-center">
+          <div class="item">
+            <img src="{{ section.image }}" />
+            <h1>{{ section.title }}</h1>
+            <p>{{ section.description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container question col-xs-12 col-sm-8 col-sm-offset-2">
+    <h1 class="text-center">Hack Ideas</h1>
+    <p>
+      {{ site.event.info.section-intro }}
+    </p>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        {% for item in site.event.ideas %}
+        <div class="question col-xs-12 col-sm-12">
+          <a href="ideas.html#{{item.id}}"><h2>{{ item.title }}</h2></a>
+          <hr>
+          {{ item.hook | markdownify }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <hr>
+    <p>
+      {{ site.event.info.section-footer }}
+    </p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h1 class="text-center">Prizes</h1>
+    <div class="row col-sm-offset-2 question">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 question">
+        <h2>Main Prizes</h2>
+        <hr>
+        <div class="question col-xs-12 col-sm-12">
+          <h3> To be announced soon
+          </h3>
+        </div>
+        <!--{% for item in site.event.prizes %}
+        <div class="question col-xs-12 col-sm-12">
+          <h3>{{ item.title }} - {{ item.amount }}
+          </h3>
+        </div>
+        {% endfor %}-->
+      </div>
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 question">
+        <h2>Sponsor Prizes</h2>
+        <hr>
+        <div class="question col-xs-12 col-sm-12">
+          <h3> To be announced soon
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h1 class="text-center">Judging Criteria</h1>
+    <div class="row col-sm-offset-2 question">
+      <p>Hacks will be judged based on the criteria below and weighted accordingly</p>
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        {% for item in site.event.criteria %}
+        <div class="question col-xs-12 col-sm-12">
+          <h3>{{ item.title }} - {{ item.weight }}
+          </h3>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="faq">
+  <div class="container">
+    <h1 class="text-center">Schedule</h1>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        {% for item in site.event.schedule %}
+        <div class="question col-xs-12 col-sm-12">
+          <h2>{{ item.start }} - {{ item.title }}
+          </h2>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="faq" id="venue">
+  <div class="container">
+    <h1 class="text-center">Venue</h1>
+    <div class="row" style="text-align:center; width:100%">
+      <div class="question col-xs-12 col-sm-8 col-sm-offset-2"><h2>Columbia University, New York, NY 94110 </h2></div>
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2"> 
+        <iframe width="400" height="400" frameborder="0"· src="https://www.bing.com/maps/embed/viewer.aspx?v=3&cp=40.807540~-73.962570&lvl=15&w=400&h=400&sty=r&typ=d&pp=&ps=&dir=0&mkt=en-us&src=SHELL&form=BMEMJS">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h1 class="text-center">Sponsors</h1>
+    <div class="row" style="text-align: center">
+        <div class="question col-xs-12 col-sm-12">
+          <h3> To be announced soon
+          </h3>
+        </div>
+       <!--{% for item in site.event.sponsors %}
+        <div class="question col-xs-12 col-sm-8 col-sm-offset-2">
+          <img src="{{ item.image }}" />
+        </div>
+        {% endfor %}
+        -->
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h1 id="attending" class="text-center">Attending</h1>
+    <div class="row" style="text-align: center">
+        <div class="question col-xs-12 col-sm-12">
+          <h3> Registration to be open soon via eventbrite, stay tuned! 
+          </h3>
+        </div>
+    </div>
+  </div>
+</section>
+<section class="faq">
+  <div class="container">
+    <h1 class="text-center">Contact</h1>
+    <div class="row">
+      <div class="question col-xs-12 col-sm-8 col-sm-offset-2"><h2>Twitter handle: <a href="https://twitter.com/@{{site.event.contact.twitter_handle}}">{{site.event.contact.twitter_handle}}</a></h2></div>
+      <div class="question col-xs-12 col-sm-8 col-sm-offset-2"><h2>Twitter hashtag: <a href="https://twitter.com/search?f=tweets&q=%23{{site.event.contact.twitter_hashtag}}&src=typd">#{{site.event.contact.twitter_hashtag}}</a></h2></div>
+      <div class="question col-xs-12 col-sm-8 col-sm-offset-2"><h2>E-mail: <a href="mailto:{{site.event.contact.email}}">{{site.event.contact.email}}</a></h2></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h1 class="text-center">FAQ</h1>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        {% for item in site.event.faq %}
+        <div class="question col-xs-12 col-sm-12">
+          <h2>{{ item.question }}</h2>
+          <hr>
+          {{ item.answer | markdownify }}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
