@@ -282,6 +282,56 @@ event:
        facilitators:
          - name: "Daniel Coloma"
          - name: "Dave Choffnes"
+     - title: "Fingerprinting Auditing Plugin "
+       type: "Browser Plugin"
+       hook: >
+         Fingerprinting adoption as a way to track users is growing, every day
+         more sites (including some of the more popular ones) use these
+         techniques in order to identify. Thanks to a Princeton project named <a
+         href="https://webtransparency.cs.princeton.edu/webcensus/">Privacy
+         Census</a>, we can now understand how extended are
+         advanced tracking techniques such as fingerprinting. We are looking for
+         a browser plugin that, utilising the information already spotted by
+         Princeton, shows user information about the site she is browsing or even
+         show her the level of exposure to fingerprinting according to the 
+         browsing history.
+       description: >
+         This could be built via a browser plugin that monitors the current 
+         website, compares it to the findings database and informs the user
+         (e.g. via an icon) about the usage of Finferprinting.
+       assets:
+         - title: "Complete Datasets" 
+           url: "https://webtransparency.cs.princeton.edu/webcensus/#data"
+         - title: "Insight Dataset"
+           url: "TBD"
+       links:
+         - title: "Privacy Census Homepage" 
+           url: "https://webtransparency.cs.princeton.edu/webcensus/"
+       facilitators: 
+         - name: "Steven Englehardt" 
+         - name: "Daniel Coloma"
+     - title: "How much is my data worth?"
+       hook: >
+         Durint the last year, people have started to be aware of the 
+         importance of personal data for Internet companies. However,
+         it's not clear how much value do they have for those companies.
+         We thinks users would love a way to calculate how much they are
+         worth, taking into account the type of data, the specific data 
+         and the potential number of similar users.
+       description: >
+         This could be built in different ways: as a website in which the
+         user can input manually some data or connect to some of the services
+         they use, as a mobile application or as s browser plugin that
+         detects user activity. 
+       type: "Browser Plugin, Website, Mobile App"
+       assets:
+         - title: "TBD" 
+           url: "TBD"
+       links:
+         - title: "TBD" 
+           url: "TBD"
+       facilitators: 
+         - name: "Daniel Coloma"
 
   # Frequently asked questions.
   faq:
