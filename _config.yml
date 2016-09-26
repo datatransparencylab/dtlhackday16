@@ -283,6 +283,7 @@ event:
          - name: "Daniel Coloma"
          - name: "Dave Choffnes"
      - title: "Fingerprinting Auditing Plugin"
+       id: "fingerprinting-plugin"
        type: "Browser Plugin"
        hook: >
          Fingerprinting adoption as a way to track users is growing, every day
@@ -311,6 +312,7 @@ event:
          - name: "Steven Englehardt"
          - name: "Daniel Coloma"
      - title: "How much is my data worth?"
+       id: "data-worth"
        hook: >
          During the last year, people have started to be aware of the 
          importance of personal data for Internet companies. However,
@@ -333,6 +335,7 @@ event:
        facilitators: 
          - name: "Daniel Coloma"
      - title: "How revealing my public information can be?"
+       id: "public-info"
        hook: >
          Many people unknowingly volunteer sensitive personal information and
          fail to restrict access to it. This kind of information is 
@@ -362,6 +365,7 @@ event:
        facilitators: 
          - name: "Daniel Coloma"
      - title: "Parent Child Education Challenge"
+       id: "parent-child"
        hook: >
          Tracking mechanisms often can't separate child and adult activity,
          putting children at risk for targeted advertising and analytics. 
