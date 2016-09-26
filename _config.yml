@@ -332,8 +332,8 @@ event:
            url: "TBD"
        facilitators: 
          - name: "Daniel Coloma"
-     - title: How revealing my public information can be?
-       hook: > 
+     - title: "How revealing my public information can be?"
+       hook: >
          Many people unknowingly volunteer sensitive personal information and
          fail to restrict access to it. This kind of information is 
          analytically valuable to both data brokers and exploitation value to 
@@ -361,7 +361,7 @@ event:
        links:
          - title: "TBD" 
            url: "TBD"
-       - title: Parent/Child Education Challenge 
+       - title: "Parent/Child Education Challenge"
          hook: > 
            Tracking mechanisms often can't separate child and adult activity,
            putting children at risk for targeted advertising and analytics. 
