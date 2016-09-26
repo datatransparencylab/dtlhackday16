@@ -282,7 +282,7 @@ event:
        facilitators:
          - name: "Daniel Coloma"
          - name: "Dave Choffnes"
-     - title: "Fingerprinting Auditing Plugin "
+     - title: "Fingerprinting Auditing Plugin"
        type: "Browser Plugin"
        hook: >
          Fingerprinting adoption as a way to track users is growing, every day
@@ -308,11 +308,11 @@ event:
          - title: "Privacy Census Homepage" 
            url: "https://webtransparency.cs.princeton.edu/webcensus/"
        facilitators: 
-         - name: "Steven Englehardt" 
+         - name: "Steven Englehardt"
          - name: "Daniel Coloma"
      - title: "How much is my data worth?"
        hook: >
-         Durint the last year, people have started to be aware of the 
+         During the last year, people have started to be aware of the 
          importance of personal data for Internet companies. However,
          it's not clear how much value do they have for those companies.
          We thinks users would love a way to calculate how much they are
@@ -356,37 +356,38 @@ event:
            url: http://support.gnip.com/apis/search_full_archive_api/
          - title: Twitter tag definitions
            url: https://api.tagdef.com/
-       facilitators:
-         - name: "Daniel Coloma"
        links:
          - title: "TBD" 
            url: "TBD"
-       - title: "Parent/Child Education Challenge"
-         hook: > 
-           Tracking mechanisms often can't separate child and adult activity,
-           putting children at risk for targeted advertising and analytics. 
-           Younger generations also tend to have a much larger “digital 
-           footprint”, often increasing their risk of identity theft and 
-           cyberstalking. There's no technical “silver bullet” for these complex
-           issues, so educating parents and children is key to improving their 
-           cyber safety.
-         description: 
-           The goal is creating an interactive tool for educating parents, 
-           children, or both on topics related to online privacy. This an 
-           open-ended challenge so you may use any format, API, language, or 
-           platform you see fit!
-           Some examples: “Privacy checkup” style web app that aggregates 
-           data from multiple sources or a “What to do if …?” to preven particularly
-           risky situations.
+       facilitators: 
+         - name: "Daniel Coloma"
+     - title: "Parent Child Education Challenge"
+       hook: >
+         Tracking mechanisms often can't separate child and adult activity,
+         putting children at risk for targeted advertising and analytics. 
+         Younger generations also tend to have a much larger “digital 
+         footprint”, often increasing their risk of identity theft and 
+         cyberstalking. There's no technical “silver bullet” for these complex
+         issues, so educating parents and children is key to improving their 
+         cyber safety.
+       description: >
+         The goal is creating an interactive tool for educating parents, 
+         children, or both on topics related to online privacy. This an 
+         open-ended challenge so you may use any format, API, language, or 
+         platform you see fit!
+         Some examples: “Privacy checkup” style web app that aggregates 
+         data from multiple sources or a “What to do if …?” to preven particularly
+         risky situations.
        type: "All"
        facilitators:
          - name: "Daniel Coloma"
        links:
-         - title: "TBD"
-           url: "TBD"
+        - title: "TBD"
+          url: "TBD"
        assets:
-         - title: "TBD"
-           url: "TBD"
+        - title: "TBD"
+          url: "TBD"
+
   # Frequently asked questions.
   faq:
     - question: "What is a hackathon?"
