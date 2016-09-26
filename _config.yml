@@ -332,7 +332,61 @@ event:
            url: "TBD"
        facilitators: 
          - name: "Daniel Coloma"
-
+     - title: How revealing my public information can be?
+       hook: > 
+         Many people unknowingly volunteer sensitive personal information and
+         fail to restrict access to it. This kind of information is 
+         analytically valuable to both data brokers and exploitation value to 
+         attackers. The idea is raising awareness of the potential danger 
+         it has for users.
+       description: >
+         By using public, unauthenticated APIs to collect information on
+         individuals that could be used to answer a security question or is
+         otherwise sensitive. You may make inferences based solely on metadata
+         if appropriate. The goal is to demonstrate accidental disclosure and
+         raise awareness.  Example: Someone tweets “I got a new car!” and a 
+         photo. You now have the make and model of their current, and maybe 
+         first, vehicle. This information may come up in an account recovery 
+         process.
+       type: "Browser Plugin, Website"
+       assets:
+         - title: Twitter official
+           url: https://dev.twitter.com/rest/public
+         - title: Twitter archive search
+           url: http://support.gnip.com/apis/search_full_archive_api/
+         - title: Twitter tag definitions
+           url: https://api.tagdef.com/
+       facilitators:
+         - name: "Daniel Coloma"
+       links:
+         - title: "TBD" 
+           url: "TBD"
+       - title: Parent/Child Education Challenge 
+         hook: > 
+           Tracking mechanisms often can't separate child and adult activity,
+           putting children at risk for targeted advertising and analytics. 
+           Younger generations also tend to have a much larger “digital 
+           footprint”, often increasing their risk of identity theft and 
+           cyberstalking. There's no technical “silver bullet” for these complex
+           issues, so educating parents and children is key to improving their 
+           cyber safety.
+         description: 
+           The goal is creating an interactive tool for educating parents, 
+           children, or both on topics related to online privacy. This an 
+           open-ended challenge so you may use any format, API, language, or 
+           platform you see fit!
+           Some examples: “Privacy checkup” style web app that aggregates 
+           data from multiple sources or a “What to do if …?” to preven particularly
+           risky situations.
+       type: "All"
+       facilitators:
+         - name: "Daniel Coloma"
+       links:
+         - title: "TBD"
+           url: "TBD"
+       assets:
+         - title: "TBD"
+           url: "TBD"
   # Frequently asked questions.
   faq:
     - question: "What is a hackathon?"
