@@ -47,6 +47,7 @@ layout: default
           <a href="ideas.html#{{item.id}}"><h2>{{ item.title }}</h2></a>
           <hr>
           {{ item.hook | markdownify }}
+          <a href="ideas.html#{{item.id}}">More details</a>
         </div>
         {% endfor %}
       </div>
@@ -125,9 +126,14 @@ layout: default
   <div class="container">
     <h1 class="text-center">Venue</h1>
     <div class="row" style="text-align:center; width:100%">
-      <div class="question col-xs-12 col-sm-8 col-sm-offset-2"><h2>Columbia University, New York, NY 94110 </h2></div>
+      <div class="question col-xs-16 col-sm-10 col-sm-offset-1">
+        <h2>Columbia University, New York, NY 94110 </h2>
+        <h4>The Schapiro Center for Engineering and Physical Science Research (CEPSR)</h4>
+        <h4>Davis Auditorium - 4th floor (campus level), room 412 </h4>
+        <h4>530 West 120th Street (between Broadway and Amsterdam)</h4>
+      </div>
       <div class="col-xs-12 col-sm-8 col-sm-offset-2"> 
-        <iframe width="400" height="400" frameborder="0"· src="https://www.bing.com/maps/embed/viewer.aspx?v=3&cp=40.807540~-73.962570&lvl=15&w=400&h=400&sty=r&typ=d&pp=&ps=&dir=0&mkt=en-us&src=SHELL&form=BMEMJS">
+        <iframe width="400" height="400" frameborder="0"· src="https://www.bing.com/maps/embed/viewer.aspx?v=3&cp=40.809801~-73.962910&lvl=15&w=400&h=400&sty=r&typ=d&pp=&ps=&dir=0&mkt=en-us&src=SHELL&form=BMEMJS">
         </iframe>
       </div>
     </div>
@@ -157,8 +163,11 @@ layout: default
     <h1 id="attending" class="text-center">Attending</h1>
     <div class="row" style="text-align: center">
         <div class="question col-xs-12 col-sm-12">
-          <h3> Registration to be open soon via eventbrite, stay tuned! 
-          </h3>
+          <a
+          href="http://www.eventbrite.com/e/hackathon-data-transparency-lab-2016-registration-27926649360?ref=ebtnebregn"
+        target="_blank"><img
+      src="https://www.eventbrite.com/custombutton?eid=27926649360"
+    alt="Eventbrite - Hackathon - Data Transparency Lab 2016" /></a>
         </div>
     </div>
   </div>

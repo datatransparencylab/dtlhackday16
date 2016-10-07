@@ -133,60 +133,120 @@ event:
 
   # Hack Ideas
   ideas:
-     - title: "Visualization of Personal Information Leaks"
+     - title: "Raising Awareness of Personal Information Leaks"
        id: "recon-visualization"
        hook: > 
          Northeastern University has been running <a
          href="http://recon.meddle.mobi/"> ReCon project </a>with the 
          target of identifying which mobile apps are leaking Personal Information,
          which type of information it's leaked and what are the destinations of 
-         that info. We want you to create a visualization that let people 
-         understand what is going on with their data when they use mobile 
-         applications on their mobile devices.
+         that info. We want you to create different tools that leverage the 
+         insights discovered by this project.
        description: >
-         The idea would be using a <a
-         href="http://recon.meddle.mobi/json/data.json"> JSON file</a> that
-         gathers aggregated information about all the leaks of Personal
-         Information that have been detected by the ReCon project.
-         Alternatively, an <a
-         href="http://datatransparencylab.github.io/recon-api/">API has been
-         also built on top of that json that could be used depending on your
-         preference.  You can get some inspiration by checking a <a
-         href="http://datatransparencylab.github.io/recon/">sample
-         visualization</a> developed by the Data Transparency Lab.
-       type: "Visualization"
+         <ol>
+           <li>
+             The first idea for the hack is developing a visualization on top
+             of the ReCon Dataest that let people understand what is going on 
+             with their data when they use mobile applications on their mobile 
+             devices. This could be built directly by using ReCon Dataset.
+           </li>
+           <li>
+             Another idea is developing a browser plugin that let end-users
+             check what is the level of leakiness of an application when she is 
+             browsing the application homepage in the Google Play or App Stores.
+           </li>
+           <li>
+             An Android application that scans the applications a user has 
+             installed in her device and tells her the potential information 
+             that those applications could be leaking and calculates a 
+             <i>leaking </i> score for her device. The idea would be using 
+             ReCon API to develop an Android application that scans the other 
+             apps installed in the device and use the API to check if any of
+             those apps has been spotted in the past leaking Personal 
+             Information by ReCon. The application could offer user advise 
+             about how to proceed depending on how bad the issues spotted in 
+             the installed applications are.
+           </li>
+           <li>
+             The idea would be implementing a Browser extension that inspects
+             the traffic and provides a similar level of detection of Personal
+             Infomration leaks to third parties.
+           </li>
+           <li>
+             We would like also to provide users with a Real-time visualization
+             of leaks that let them better understand which information is 
+             being sent and where is it sent to.
+           </li>
+           <li>
+             We would also love a mecanism in which users could contribute back
+             their feedback about the leaks so we could create a crowdsourcing
+             database with all the modificatoin/blocking rules users create.
+           </li>
+         </ol>
+       type: "Visualization, Browser Plugin, App"
        assets: 
          - title: "ReCon Dataset" 
            url: "http://recon.meddle.mobi/json/data.json"
-         - title: "Example Visualization"
-           url: "http://datatransparencylab.github.io/recon/"
+           description: >
+             It's a JSON file that gathers aggregated information about all 
+             the leaks of Personal Information that have been detected by the 
+             ReCon project.
          - title: "API"
            url: "http://datatransparencylab.github.io/recon-api/"
+           description: >
+             It's an API built on top of that json that could be used 
+             to check directly in an app is leaking PI or whether a domain 
+             is receiving information and from which apps.
+         - title: "Example Visualization"
+           url: "http://datatransparencylab.github.io/recon/"
+           description: >
+             You can get some inspiration by checking a sample
+             visualization developed by the Data Transparency Lab Team.
        links: 
          - title: "ReCon Project Homepage"
            url: "http://recon.meddle.mobi/"
        facilitators: 
          - name: "Dave Choffnes"
          - name: "Daniel Coloma"
-     - title: "Visualization of Fingerprinting Adoption"
+     - title: "Privacy Census"
        id: "privacycensus-visualization"
        hook: >
          Thanks to a Princeton project named <a
          href="https://webtransparency.cs.princeton.edu/webcensus/">Privacy
-         Census</a>, we can now understand how extended are
-         advanced tracking techniques such as fingerprinting. However, this 
-         information might be difficult to process and understand for the 
+         Census</a>, we can now understand how extended are tracking techniques
+         over the web, including advanced ones such as fingerprinting. However, 
+         this information might be difficult to process and understand for the 
          average user. We are looking for ways to communicate this appropriately
-         to end-users so they can understand what is fingerprinting, how is 
-         it used and how does it affect them.
+         to end-users so they can understand what are those techniques, how are 
+         they used and how do they affect them.
        description: > 
-         The idea would be using either the whole dataset shared by Princeton
-         or a simplified dataset that just contains the key insights about some
-         of the key tracking techniques that are being analysed. The visualization
-         could be, for instance, a website that shows which are the top domains
-         using fingerpriting, or how fingerprinting adoption varies depending on
-         the geography or on the website type.
-       type: "Visualization"
+         <ol>
+           <li>
+             One idea would be using either the whole dataset shared by 
+             Princeton or a simplified dataset that just contains the key 
+             insights about some of the key tracking techniques that are being 
+             analysed. The visualization could be, for instance, a website that 
+             shows which are the top domains using fingerpriting, or how 
+             fingerprinting adoption varies depending on the geography or on the 
+             website type.
+           </li>
+           <li>
+             Another idea would be building  a browser plugin that, utilising 
+             the information already spotted by Princeton, shows user 
+             information about the site she is browsing or even show her the 
+             level of exposure to fingerprinting according to the browsing 
+             history. This could be built via a browser plugin that monitors the 
+             current website, compares it to the findings database and informs
+             the user (e.g. via an icon) about the usage of Finferprinting.
+           </li>
+           <li>
+             The challenges above mostly target fingerprinting techniques, but 
+             the Dataset also contains information about stateful tracking 
+             (e.g. cookies, headers...) thata could be used for many other 
+             ideas.
+           </li>
+         </ol>
+       type: "Visualization, Plugin"
        assets: 
          - title: "Complete Datasets" 
            url: "https://webtransparency.cs.princeton.edu/webcensus/#data"
@@ -205,12 +265,13 @@ event:
          Browser plugin that has been developed by Carlos III University. The
          plugin shows end-user an estimation of the value they are generating
          to Facebook based on her browsing activity (i.e. the ads she watches
-         and clicks on).  The idea of this hack is creation companion education
+         and clicks on).
+       description: >
+         The idea of this hack is creation companion education
          material that based on the tool, let users understand clearly the
          value they have for facebook, and on which facets do their value
          depend.  Education Material could be some statistics/data, a vídeo, a
          website, etc.
-       description: >
          This material could be some animation, video, etc. that let user 
          understand how their Facebook activity is monetized or a visualization
          about how the value a Facebook user varies depending on the audience
@@ -225,92 +286,6 @@ event:
        facilitators: 
          - name: "Daniel Coloma"
          - name: "Ángel Cuevas"
-     - title: "How much information does this application leak?"
-       id: "recon-plugin"
-       hook: >
-         Northeastern University has been running <a
-         href="http://recon.meddle.mobi/"> ReCon project </a>with the 
-         target of identifying which mobile apps are leaking Personal Information,
-         which type of information it's leaked and what are the destinations of 
-         that info. We want you to create a browser plugin that let end-users
-         chec what is the level of leakiness of an application when she is 
-         browsing the application homepage in the Google Play or App Stores.
-       description: >
-         ReCon API is an API developed on top of the Dataset gathered by the
-         ReCon project. It lets developers check if an app is leaking PI or
-         whether a domain is receiving information from multiple apps. The idea
-         would be using this API to develop a browser plugin that informs user
-         about how leaking an application is when the browser is on a URL that 
-         corresponds to a Google Play or App Store application.
-       type: "Plugin"
-       assets: 
-         - title: "API"
-           url: "http://datatransparencylab.github.io/recon-api/"
-       links: 
-         - title: "ReCon Project" 
-           url: "http://recon.meddle.mobi/"
-       facilitators: 
-         - name: "Daniel Coloma"
-         - name: "Dave Choffnes"
-     - title: "How much information does my smartphone leak?"
-       id: "recon-app"
-       hook: >
-         Northeastern University has been running <a
-         href="http://recon.meddle.mobi/"> ReCon project </a>with the 
-         target of identifying which mobile apps are leaking Personal Information,
-         which type of information it's leaked and what are the destinations of 
-         that info. We want you to create an Android application that scans the
-         applications a user has installed in her device and tells her the 
-         potential information that those applications could be leaking and 
-         calculates a <i>leaking </i> score for her device.
-       description: >
-         ReCon API is an API developed on top of the Dataset gathered by the
-         ReCon project. It lets developers check if an app is leaking PI or
-         whether a domain is receiving information from multiple apps. 
-         The idea would be using this API to develop an Android application
-         that let users scan their Android apps and tell them if any of the
-         apps has been spotted before sharing PI. The application could offer
-         user advise about how to proceed depending on how bad the issues
-         spotted in the installed applications are.
-       type: "Application"
-       assets:
-         - title: "API"
-           link: "http://datatransparencylab.github.io/recon-api/"
-       links:
-         - title: "ReCon Project Homepage"
-           link: "http://recon.meddle.mobi/"
-       facilitators:
-         - name: "Daniel Coloma"
-         - name: "Dave Choffnes"
-     - title: "Fingerprinting Auditing Plugin"
-       id: "fingerprinting-plugin"
-       type: "Browser Plugin"
-       hook: >
-         Fingerprinting adoption as a way to track users is growing, every day
-         more sites (including some of the more popular ones) use these
-         techniques in order to identify. Thanks to a Princeton project named <a
-         href="https://webtransparency.cs.princeton.edu/webcensus/">Privacy
-         Census</a>, we can now understand how extended are
-         advanced tracking techniques such as fingerprinting. We are looking for
-         a browser plugin that, utilising the information already spotted by
-         Princeton, shows user information about the site she is browsing or even
-         show her the level of exposure to fingerprinting according to the 
-         browsing history.
-       description: >
-         This could be built via a browser plugin that monitors the current 
-         website, compares it to the findings database and informs the user
-         (e.g. via an icon) about the usage of Finferprinting.
-       assets:
-         - title: "Complete Datasets" 
-           url: "https://webtransparency.cs.princeton.edu/webcensus/#data"
-         - title: "Insight Dataset"
-           url: "TBD"
-       links:
-         - title: "Privacy Census Homepage" 
-           url: "https://webtransparency.cs.princeton.edu/webcensus/"
-       facilitators: 
-         - name: "Steven Englehardt"
-         - name: "Daniel Coloma"
      - title: "How much is my data worth?"
        id: "data-worth"
        hook: >
@@ -323,8 +298,8 @@ event:
        description: >
          This could be built in different ways: as a website in which the
          user can input manually some data or connect to some of the services
-         they use, as a mobile application or as s browser plugin that
-         detects user activity. 
+         they use, as a mobile application or as a browser plugin that
+         detects user activity.
        type: "Browser Plugin, Website, Mobile App"
        assets:
          - title: "TBD" 
@@ -391,6 +366,36 @@ event:
        assets:
         - title: "TBD"
           url: "TBD"
+     - title: "Education and Raising Awareness on 3rd Party Tracking behind websites and apps"
+       id: "parent-child"
+       hook: >
+         Average user don't usually understand what is really going on when 
+         they browse a Web Site or when they use an application in their 
+         smartphone. Every time they do such a simple action, many third 
+         parties are involved, and in most of the situations, all of them try
+         to track them.
+       description: >
+         The goal is creating an interactive tool for explaining to users what
+         goes on every time they connect, for instance, to a news web site. Such
+         a tool could use the databases collected either in ReCon project 
+         (mobile apps) or Privacy Census (Web Sites)
+       type: "All"
+       facilitators:
+         - name: "Daniel Coloma"
+       links:
+         - title: "Privacy Census Complete Datasets" 
+           url: "https://webtransparency.cs.princeton.edu/webcensus/#data"
+         - title: "Insight Dataset"
+           url: "TBD"
+         - title: "ReCon Dataset" 
+           url: "http://recon.meddle.mobi/json/data.json"
+           description: >
+             It's a JSON file that gathers aggregated information about all 
+             the leaks of Personal Information that have been detected by the 
+             ReCon project.
+       assets:
+        - title: "TBD"
+          url: "TBD"
 
   # Frequently asked questions.
   faq:
@@ -419,7 +424,7 @@ event:
   # Contact Information 
   contact:
     twitter_handle: dtl_info
-    twitter_hashtag: dtlhackathon16
+    twitter_hashtag: dtlhackday16
     email: events@datatransparencylab.org
 
 # ----------------------------------------------------
