@@ -197,6 +197,11 @@ event:
              It's an API built on top of that json that could be used 
              to check directly in an app is leaking PI or whether a domain 
              is receiving information and from which apps.
+         - title: "ReCon ML Source Code"
+           url: "https://recon.meddle.mobi/codeanddata.html"
+           description: >
+             Source Code of the ReCon Machine Learning System that detects PI
+             Leaks.
          - title: "Example Visualization"
            url: "http://datatransparencylab.github.io/recon/"
            description: >
@@ -267,18 +272,28 @@ event:
          to Facebook based on her browsing activity (i.e. the ads she watches
          and clicks on).
        description: >
-         The idea of this hack is creation companion education
-         material that based on the tool, let users understand clearly the
-         value they have for facebook, and on which facets do their value
-         depend.  Education Material could be some statistics/data, a vídeo, a
-         website, etc.
-         This material could be some animation, video, etc. that let user 
-         understand how their Facebook activity is monetized or a visualization
-         about how the value a Facebook user varies depending on the audience
-         in which she is categorised and how is she assigned to those audiences.
+         In this context, we are thinking in two different directions that
+         could be used by the teams.
+         On one hand, we would like to offer end-users the possibility to 
+         explore what type of ads are shown to them. Thanks to this tool 
+         we have a good set of historical data about Facebook sessions and ads.
+         The idea would be building visualizations that let users understand
+         which companies are targetting them: top advertisers, type of ads, 
+         historical evolution, etc. This could be implemented as stand-alone
+         visualization but also could be potentially embeded into the plugin 
+         itself.
+         On the other hand, we are also interested in the creation of companion
+         education material that based on the tool, let users understand
+         clearly the value they have for facebook, and on which facets do their
+         value depend.  Education Material could be some statistics/data, a
+         vídeo, a website, etc. For instance, it would be interesting to 
+         communicate users how their value vary depending on the audience
+         in which they are categorised and how are they assigned to those audiences.
        type: "Education Material"
        assets:
-         - title: "Tool and Datasets"
+         - title: "Tool"
+           url: https://chrome.google.com/webstore/detail/facebook-data-valuation-t/blednbbpnnambjaefhlocghajeohlhmh
+         - title: "Dataset"
            url: TBD
        links:
          - title: "FDVT Homepage" 
