@@ -79,15 +79,19 @@ event:
 
   prizes:
     - title: 1st Prize 
-      amount: $2000 
+      amount: $1600 
     - title: 2nd Prize 
-      amount: $1000 
+      amount: $1200 
     - title: 3rd Prize 
-      amount: $500 
+      amount: $600 
 
   sponsor-prizes:
-    - title: E-Corp Prize 
-      amount: $2000 
+    - title: Best Social Impact 
+      amount: $400 
+    - title: Most creative and user-friendly 
+      amount: $400 
+    - title: Biggest privacy protection impact
+      amount: $400 
 
   criteria:
     - title: Originality

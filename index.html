@@ -67,22 +67,24 @@ layout: default
         <h2>Main Prizes</h2>
         <hr>
         <div class="question col-xs-12 col-sm-12">
-          <h3> To be announced soon
-          </h3>
-        </div>
-        <!--{% for item in site.event.prizes %}
+        {% for item in site.event.prizes %}
         <div class="question col-xs-12 col-sm-12">
           <h3>{{ item.title }} - {{ item.amount }}
           </h3>
         </div>
-        {% endfor %}-->
+        {% endfor %}
+        </div>
       </div>
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 question">
         <h2>Sponsor Prizes</h2>
         <hr>
         <div class="question col-xs-12 col-sm-12">
-          <h3> To be announced soon
+        {% for item in site.event.sponsor-prizes %}
+        <div class="question col-xs-12 col-sm-12">
+          <h3>{{ item.title }} - {{ item.amount }}
           </h3>
+        </div>
+        {% endfor %}
         </div>
       </div>
     </div>

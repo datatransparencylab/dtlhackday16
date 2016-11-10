@@ -20,7 +20,7 @@ layout: default
           Assets
           <ul>
           {% for asset in item.assets %}
-          <li><a href="{{asset.url}}">{{asset.title}}</a></li>
+          <li><a href="{{asset.url}}">{{asset.title}}</a> {{asset.description}}</li>
           {% endfor %}
           </ul>
           <hr>
