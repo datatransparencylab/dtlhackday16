@@ -110,10 +110,14 @@ event:
       image: images/ramon.jpg
 
   sponsors:
-    - name: E-Corp 
-      image: images/ECorp.png
-      description: E-Corp 
-      url: http://www.ecorp.com 
+    - name: Redmorph 
+      image: images/redmorph.jpg
+      description: 
+      url: https://redmorph.com 
+    - name: IPVanish 
+      image: images/ipvanish.png
+      description: 
+      url: https://www.highwinds.com 
 
   schedule:
     - start: 08:00 AM 
@@ -259,8 +263,14 @@ event:
        assets: 
          - title: "Complete Datasets" 
            url: "https://webtransparency.cs.princeton.edu/webcensus/#data"
+           description: >
+             The complete postgres dumps with all the information of 
+             the 1000000 sites crawl.
          - title: "Insight Dataset"
            url: "TBD"
+           description: >
+             A distilled information about the websites that have been spotted 
+             using different fingerprinting techniques.
        links: 
          - title: "Privacy Census Homepage" 
            url: "https://webtransparency.cs.princeton.edu/webcensus/"
@@ -297,8 +307,13 @@ event:
        assets:
          - title: "Tool"
            url: https://chrome.google.com/webstore/detail/facebook-data-valuation-t/blednbbpnnambjaefhlocghajeohlhmh
+           description: >
+             The FDVT Chrome plugin 
          - title: "Dataset"
-           url: TBD
+           url: https://app.box.com/s/248ccb1vwa497abr04l2zzgzxfhywnoo 
+           description: >
+             It's a JSON file that shows the ads that some users of the 
+             toold have been shown durin a limited period of time 
        links:
          - title: "FDVT Homepage" 
            url: "http://fdvt.org/fdvt/"

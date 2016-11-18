@@ -34,6 +34,19 @@ layout: default
 </section>
 
 <section class="faq">
+  <div class="container">
+    <h1 class="text-center">Sponsors</h1>
+    <div class="row" style="text-align: center">
+       {% for item in site.event.sponsors %}
+        <div class="question col-xs-12 col-sm-8 col-sm-offset-2">
+          <a href="{{ item.url}}"><img src="{{ item.image }}" /></a>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="faq">
   <div class="container question col-xs-12 col-sm-8 col-sm-offset-2">
     <h1 class="text-center">Hack Ideas</h1>
     <p>
@@ -63,6 +76,13 @@ layout: default
   <div class="container">
     <h1 class="text-center">Prizes</h1>
     <div class="row col-sm-offset-2 question">
+      <p>
+        We will provide the best ideas the possibility to use DTL Communication
+        channels and share the work done. 
+      </p>
+      <p>
+        Apart from that, at the end of the session the following prizes will be awarded: 
+      </p>
       <div class="col-xs-12 col-sm-8 col-sm-offset-2 question">
         <h2>Main Prizes</h2>
         <hr>
@@ -138,24 +158,6 @@ layout: default
         <iframe width="400" height="400" frameborder="0"· src="https://www.bing.com/maps/embed/viewer.aspx?v=3&cp=40.809801~-73.962910&lvl=15&w=400&h=400&sty=r&typ=d&pp=&ps=&dir=0&mkt=en-us&src=SHELL&form=BMEMJS">
         </iframe>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="faq">
-  <div class="container">
-    <h1 class="text-center">Sponsors</h1>
-    <div class="row" style="text-align: center">
-        <div class="question col-xs-12 col-sm-12">
-          <h3> To be announced soon
-          </h3>
-        </div>
-       <!--{% for item in site.event.sponsors %}
-        <div class="question col-xs-12 col-sm-8 col-sm-offset-2">
-          <img src="{{ item.image }}" />
-        </div>
-        {% endfor %}
-        -->
     </div>
   </div>
 </section>
