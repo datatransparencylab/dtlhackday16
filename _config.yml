@@ -220,6 +220,7 @@ event:
            url: "http://recon.meddle.mobi/"
        facilitators: 
          - name: "Dave Choffnes"
+         - name: "Jingjing Ren"
          - name: "Daniel Coloma"
      - title: "Privacy Census"
        id: "privacycensus-visualization"
@@ -267,16 +268,17 @@ event:
              The complete postgres dumps with all the information of 
              the 1000000 sites crawl.
          - title: "Insight Dataset"
-           url: "TBD"
+           url: "dataset/fingerprinting-export"
            description: >
              A distilled information about the websites that have been spotted 
              using different fingerprinting techniques.
        links: 
          - title: "Privacy Census Homepage" 
            url: "https://webtransparency.cs.princeton.edu/webcensus/"
+         - title: "Fingerprinting Analysis" 
+           url: "https://datatransparencylab.github.io/fingerprinting-census/"
        facilitators: 
-         - name: "Steven Englehardt" 
-         - name: "Daniel Coloma"
+         - name: "Albert Terradas"
      - title: "How much are you worth for Facebook?"
        id: "fdvt-material"
        hook: >
@@ -303,7 +305,7 @@ event:
          vídeo, a website, etc. For instance, it would be interesting to 
          communicate users how their value vary depending on the audience
          in which they are categorised and how are they assigned to those audiences.
-       type: "Education Material"
+       type: "Plugin, Website, Education material"
        assets:
          - title: "Tool"
            url: https://chrome.google.com/webstore/detail/facebook-data-valuation-t/blednbbpnnambjaefhlocghajeohlhmh
@@ -318,7 +320,6 @@ event:
          - title: "FDVT Homepage" 
            url: "http://fdvt.org/fdvt/"
        facilitators: 
-         - name: "Daniel Coloma"
          - name: "Ángel Cuevas"
      - title: "How much is my data worth?"
        id: "data-worth"
@@ -333,14 +334,14 @@ event:
          This could be built in different ways: as a website in which the
          user can input manually some data or connect to some of the services
          they use, as a mobile application or as a browser plugin that
-         detects user activity.
+         detects user activity. For instance, it should be possible to
+         build something similar to what Financial Times built (see link
+         below) in a more user friendly way or in a way that instead of
+         requesting users to fill-in some data, it monitors user activity.
        type: "Browser Plugin, Website, Mobile App"
-       assets:
-         - title: "TBD" 
-           url: "TBD"
        links:
-         - title: "TBD" 
-           url: "TBD"
+         - title: "Financial Times Data Value Calculator" 
+           url: "http://www.ft.com/cms/s/2/927ca86e-d29b-11e2-88ed-00144feab7de.html?ft_site=falcon"
        facilitators: 
          - name: "Daniel Coloma"
      - title: "How revealing my public information can be?"
@@ -368,11 +369,8 @@ event:
            url: http://support.gnip.com/apis/search_full_archive_api/
          - title: Twitter tag definitions
            url: https://api.tagdef.com/
-       links:
-         - title: "TBD" 
-           url: "TBD"
        facilitators: 
-         - name: "Daniel Coloma"
+         - name: "Abhay Edlabadkar"
      - title: "Parent Child Education Challenge"
        id: "parent-child"
        hook: >
@@ -393,13 +391,7 @@ event:
          risky situations.
        type: "All"
        facilitators:
-         - name: "Daniel Coloma"
-       links:
-        - title: "TBD"
-          url: "TBD"
-       assets:
-        - title: "TBD"
-          url: "TBD"
+         - name: "Abhay Edlabadkar"
      - title: "Education and Raising Awareness on 3rd Party Tracking behind websites and apps"
        id: "parent-child"
        hook: >
@@ -416,20 +408,76 @@ event:
        type: "All"
        facilitators:
          - name: "Daniel Coloma"
-       links:
-         - title: "Privacy Census Complete Datasets" 
-           url: "https://webtransparency.cs.princeton.edu/webcensus/#data"
+         - name: "Abhay Edlabadkar"
+       assets:
          - title: "Insight Dataset"
-           url: "TBD"
+           url: "dataset/privacycensus_export.json"
+           description: >
+             It's a JSON file that gathers the information about which sites 
+             have been spotted fingerprinting users categorised by site type
+             and country
          - title: "ReCon Dataset" 
            url: "http://recon.meddle.mobi/json/data.json"
            description: >
              It's a JSON file that gathers aggregated information about all 
              the leaks of Personal Information that have been detected by the 
              ReCon project.
-       assets:
-        - title: "TBD"
-          url: "TBD"
+       links:
+         - title: Tracking Mechanisms of Potential Interest
+           url: https://www.chromium.org/Home/chromium-security/client-identification-mechanisms
+         - title: AdBlock EasyPrivacy Tracking List
+           url: https://easylist-downloads.adblockplus.org/easyprivacy.txt
+         - title: Fanboy's Enhanced Tracking List
+           url: https://www.fanboy.co.nz/enhancedstats.txt
+     - title: "Tools to bring transparency to targeted advertising"
+       id: "transp-ad"
+       hook: >
+         Targeted advertising has been the focus of much research effort,
+         mostly dedicated to optimizing the strategies for targeting users. As
+         a consequence, it has increased online advertising revenues
+         significantly. However, it has also been raising more and more
+         concerns from users, who often feel that it constitutes an invasion of
+         their privacy. In particular, users often wonder “why am I being shown
+         this ad?” or similar questions.
+         EURECOM Institute and MPI-SWS, have been conducting an study on how to
+         provide answers to such questions, in a privacy sensitive way. To this
+         extent the following following would be useful:
+       description: >
+         <ol>
+           <li>
+             Facebook Ad Collector: Build a browser extension (preferably
+             Chrome extension) that collects the ads users receive on
+             Facebook, as well as data from the new ‘Why am I seeing
+             this” functionality on Facebook, and sends them all to a server.
+             This functionality provides some explanations that could be
+             useful to our end goal, since It tells users why they have been
+             targeted. From each ad, the info collected should include at
+             least the landing page url of the ad and the media content of
+             the ad (e.g. image).
+           </li>
+           <li>
+             Android Ad Collector: Build an application that collects all the
+             ads that appear in an android device. This means that the app
+             needs to collect not only the browser ads but also ads that
+             appear in other android applications. Insights on how to achieve
+             this functionality can be gained by examining how ad blockers
+             like Adblock Plus for Android work, and emulating their
+             functionality. Similarly to the Facebook Ad Collector, after the
+             data have been gathered, they should be sent to a server. In
+             this case apart from the landing page url and the media content
+             of the ad, we would also like to collect the link that invokes
+             the ad (or some information on the ad distributor if getting the
+             exact url is not possible).
+           </li>
+         </ol>
+       type: "Browser Plugin, Android App"
+       facilitators:
+         - name: "Athanasios Andreou"
+       links:
+         - title: Chrome Extensions API 
+           url: https://developer.chrome.com/extensions
+         - title: AdBlock Plus for Android 
+           url: https://adblockplus.org/android-about 
 
   # Frequently asked questions.
   faq:

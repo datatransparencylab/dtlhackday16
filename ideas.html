@@ -16,6 +16,7 @@ layout: default
           {{ item.description | markdownify }}
           <hr>
           Type: {{ item.type }}
+          {% if item.assets|length %}
           <hr>
           Assets
           <ul>
@@ -23,6 +24,8 @@ layout: default
           <li><a href="{{asset.url}}">{{asset.title}}</a> {{asset.description}}</li>
           {% endfor %}
           </ul>
+          {% endif %}
+          {% if item.links|length %}
           <hr>
           Links
           <ul>
@@ -30,6 +33,7 @@ layout: default
           <li><a href="{{link.url}}">{{link.title}}</a></li>
           {% endfor %}
           </ul>
+          {% endif %}
           <hr>
           <!--Facilitators
           <ul>
