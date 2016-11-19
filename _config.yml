@@ -143,8 +143,8 @@ event:
   slides:
      - title: "ReCon"
        url: slides/recon.pdf
-     - title: "Fingerpring"
-       url: slides/Fingerprinting.pdf
+     - title: "Fingerprinting"
+       url: slides/fingerprinting.pdf
      - title: "Facebook Data Valution Tool"
        url: slides/fdvt.pdf
      - title: "Intro Slides"
@@ -279,7 +279,7 @@ event:
              The complete postgres dumps with all the information of 
              the 1000000 sites crawl.
          - title: "Insight Dataset"
-           url: "dataset/fingerprinting-export"
+           url: "dataset/privacymeter-export.json"
            description: >
              A distilled information about the websites that have been spotted 
              using different fingerprinting techniques.
@@ -422,7 +422,7 @@ event:
          - name: "Abhay Edlabadkar"
        assets:
          - title: "Insight Dataset"
-           url: "dataset/privacycensus_export.json"
+           url: "dataset/privacymeter-export.json"
            description: >
              It's a JSON file that gathers the information about which sites 
              have been spotted fingerprinting users categorised by site type
