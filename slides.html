@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<section class="faq">
+  <div class="container question col-xs-12 col-sm-8 col-sm-offset-2">
+    <h1 class="text-center">Hack Ideas</h1>
+    <hr>
+    <div class="row">
+      <div class="col-xs-24 col-sm-16">
+        {% for item in site.event.slides %}
+        <div class="question col-xs-24 col-sm-16">
+          <a href="{{item.url}}"> {{ item.title}} </a>
+        </div>
+        <hr>
+        {% endfor %}
+      </div>
+    </div>
+    <hr>
+  </div>
+</section>

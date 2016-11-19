@@ -139,6 +139,17 @@ event:
     - start: 08:15 PM
       title: Prizes and Closing!
 
+  # Hack Slies
+  slides:
+     - title: "ReCon"
+       url: slides/recon.pdf
+     - title: "Fingerpring"
+       url: slides/Fingerprinting.pdf
+     - title: "Facebook Data Valution Tool"
+       url: slides/fdvt.pdf
+     - title: "Intro Slides"
+       url: slides/hackday16.pdf
+
   # Hack Ideas
   ideas:
      - title: "Raising Awareness of Personal Information Leaks"
